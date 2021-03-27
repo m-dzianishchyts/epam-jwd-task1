@@ -4,7 +4,6 @@ public class LastDigitLogics {
 
     public static int calculateLastDigitOfSquareOf(int number) {
         int lastDigitOfNumber = number % 10;
-        int lastDigitOfSquare = (lastDigitOfNumber * lastDigitOfNumber) % 10;
-        return lastDigitOfSquare;
+        return (lastDigitOfNumber * lastDigitOfNumber) % 10;
     }
 }
