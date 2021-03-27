@@ -25,15 +25,15 @@ public class DayTime {
 
     @Override
     public String toString() {
-        return getClass() + "@(" + hours + ":" + minutes + ":" + seconds + ")";
+        return getClass().getName() + "@(" + hours + ":" + minutes + ":" + seconds + ")";
     }
 
     @Override
     public int hashCode() {
-        int result = hours ^ (hours >>> 16);
-        result = 31 * result + (minutes ^ (minutes >>> 16));
-        result = 31 * result + (seconds ^ (seconds >>> 16));
-        return result;
+        int hashCode = hours ^ (hours >>> 16);
+        hashCode = 31 * hashCode + (minutes ^ (minutes >>> 16));
+        hashCode = 31 * hashCode + (seconds ^ (seconds >>> 16));
+        return hashCode;
     }
 
     public int getHours() {

@@ -1,4 +1,4 @@
-package by.epamtc.basic_tasks.test;
+package by.epamtc.basic_tasks.test.task5;
 
 import by.epamtc.basic_tasks.task5.unit.PerfectNumbersLogics;
 
