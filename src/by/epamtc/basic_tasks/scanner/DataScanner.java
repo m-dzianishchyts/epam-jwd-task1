@@ -10,7 +10,8 @@ public class DataScanner {
         while (!scanner.hasNextInt()) {
             scanner.next();
         }
-        return scanner.nextInt();
+        int number = scanner.nextInt();
+        return number;
     }
 
     public static int enterPositiveIntegerFromConsole() {
@@ -28,7 +29,16 @@ public class DataScanner {
         while (!scanner.hasNextLong()) {
             scanner.next();
         }
-        return scanner.nextLong();
+        long number = scanner.nextLong();
+        return number;
+    }
+
+    public static double enterDoubleFromConsole() {
+        while (!scanner.hasNextDouble()) {
+            scanner.next();
+        }
+        double number = scanner.nextDouble();
+        return number;
     }
 
     public static double enterPositiveDoubleFromConsole() {

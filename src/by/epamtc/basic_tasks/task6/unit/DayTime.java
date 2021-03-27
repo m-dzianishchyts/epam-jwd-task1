@@ -20,12 +20,13 @@ public class DayTime {
             return false;
         }
         DayTime other = (DayTime) o;
-        return hours == other.hours && minutes == other.minutes && seconds == other.seconds;
+        boolean equals = hours == other.hours && minutes == other.minutes && seconds == other.seconds;
+        return equals;
     }
 
     @Override
     public String toString() {
-        return getClass().getName() + "@(" + hours + ":" + minutes + ":" + seconds + ")";
+        return getClass().getSimpleName() + "@(" + hours + ":" + minutes + ":" + seconds + ")";
     }
 
     @Override
