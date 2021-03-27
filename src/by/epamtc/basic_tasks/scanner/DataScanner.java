@@ -24,6 +24,13 @@ public class DataScanner {
         return number;
     }
 
+    public static long enterLongFromConsole() {
+        while (!scanner.hasNextLong()) {
+            scanner.next();
+        }
+        return scanner.nextLong();
+    }
+
     public static double enterPositiveDoubleFromConsole() {
         double number;
         do {
