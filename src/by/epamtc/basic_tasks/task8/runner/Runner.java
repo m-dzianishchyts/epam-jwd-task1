@@ -7,7 +7,7 @@ import by.epamtc.basic_tasks.task8.unit.SomeFunction;
 public class Runner {
 
     public static void main(String[] args) {
-        System.out.print("Enter x as double: ");
+        System.out.print("Enter x: ");
         double x = DataScanner.enterDoubleFromConsole();
 
         double valueOfFunction;
