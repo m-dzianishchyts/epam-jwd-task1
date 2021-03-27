@@ -12,6 +12,7 @@ public class MonthScanner {
         } while (monthNumber < 1 || monthNumber > 12);
 
         // Offset because of numerating elements from 0.
-        return Month.values()[monthNumber - 1];
+        Month enteredMonth = Month.values()[monthNumber - 1];
+        return enteredMonth;
     }
 }

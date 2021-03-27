@@ -14,6 +14,7 @@ public class InnerOuterSquaresLogics {
         double circleRadius = InscribedShapesLogics.calculateRadiusOfCircleInscribedInSquare(outerSquareSideLength);
 
         double innerSquareSideLength = InscribedShapesLogics.calculateSideLengthOfSquareInscribedInCircle(circleRadius);
-        return SquareLogics.calculateSquareAreaBySideLength(innerSquareSideLength);
+        double innerSquareArea = SquareLogics.calculateSquareAreaBySideLength(innerSquareSideLength);
+        return innerSquareArea;
     }
 }

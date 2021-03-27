@@ -6,13 +6,15 @@ public class SquareLogics {
         if (area <= 0) {
             throw new IllegalArgumentException("Area must be positive");
         }
-        return Math.sqrt(area);
+        double squareSideLength = Math.sqrt(area);
+        return squareSideLength;
     }
 
     public static double calculateSquareAreaBySideLength(double sideLength) {
         if (sideLength <= 0) {
             throw new IllegalArgumentException("Square's side length must be positive.");
         }
-        return sideLength * sideLength;
+        double squareArea = sideLength * sideLength;
+        return squareArea;
     }
 }

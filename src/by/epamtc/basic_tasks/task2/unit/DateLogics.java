@@ -9,6 +9,7 @@ public class DateLogics {
         if (month == null) {
             throw new IllegalArgumentException("Month cannot be null.");
         }
+        int daysAmountInMonth;
         switch (month) {
             case JANUARY:
             case MARCH:
@@ -17,18 +18,22 @@ public class DateLogics {
             case AUGUST:
             case OCTOBER:
             case DECEMBER:
-                return 31;
+                daysAmountInMonth =  31;
+                break;
             case FEBRUARY:
-                return isLeapYear(year) ? 29 : 28;
+                daysAmountInMonth = isLeapYear(year) ? 29 : 28;
+                break;
             default:
-                return 30;
+                daysAmountInMonth = 30;
         }
+        return daysAmountInMonth;
     }
 
     public static boolean isLeapYear(int year) {
         if (year <= 0) {
             throw new IllegalArgumentException("Year must be positive.");
         }
-        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        return isLeapYear;
     }
 }

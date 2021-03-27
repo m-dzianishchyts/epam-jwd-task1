@@ -5,10 +5,13 @@ import java.util.stream.Stream;
 public class EvenNumbersLogics {
 
     public static boolean isEven(int number) {
-        return number % 2 == 0;
+        boolean isEven = number % 2 == 0;
+        return isEven;
     }
 
-    public static boolean atLeastTwoAreEven(int numberA, int numberB, int numberC, int numberD) {
-        return Stream.of(numberA, numberB, numberC, numberD).filter(EvenNumbersLogics::isEven).count() >= 2;
+    public static boolean areEvenAtLeastTwo(int numberA, int numberB, int numberC, int numberD) {
+        long evensAmount = Stream.of(numberA, numberB, numberC, numberD).filter(EvenNumbersLogics::isEven).count();
+        boolean atLeastTwoAreEven = evensAmount >= 2;
+        return atLeastTwoAreEven;
     }
 }

@@ -6,13 +6,15 @@ public class InscribedShapesLogics {
         if (radius <= 0) {
             throw new IllegalArgumentException("Radius must be positive.");
         }
-        return radius * Math.sqrt(2);
+        double squareSideLength = radius * Math.sqrt(2);
+        return squareSideLength;
     }
 
     public static double calculateRadiusOfCircleInscribedInSquare(double sideLength) {
         if (sideLength <= 0) {
             throw new IllegalArgumentException("Square's side length must be positive.");
         }
-        return sideLength / 2;
+        double radius = sideLength / 2;
+        return radius;
     }
 }

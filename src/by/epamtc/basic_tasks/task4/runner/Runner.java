@@ -15,7 +15,7 @@ public class Runner {
             System.out.printf("Accepted %d number(s).\n", i);
         } while (i < enteredNumbers.length);
 
-        boolean inputContainsAtLeastTwoEvenNumbers = EvenNumbersLogics.atLeastTwoAreEven(enteredNumbers[0],
+        boolean inputContainsAtLeastTwoEvenNumbers = EvenNumbersLogics.areEvenAtLeastTwo(enteredNumbers[0],
                 enteredNumbers[1], enteredNumbers[2], enteredNumbers[3]);
 
         System.out.println("At least two of entered numbers are even: " + inputContainsAtLeastTwoEvenNumbers);
