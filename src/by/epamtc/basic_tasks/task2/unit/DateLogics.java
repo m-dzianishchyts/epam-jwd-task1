@@ -6,6 +6,9 @@ public class DateLogics {
         if (year <= 0) {
             throw new IllegalArgumentException("Year must be positive.");
         }
+        if (month == null) {
+            throw new IllegalArgumentException("Month cannot be null.");
+        }
         switch (month) {
             case JANUARY:
             case MARCH:
