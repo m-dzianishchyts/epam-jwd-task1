@@ -1,4 +1,4 @@
-package by.epamtc.basic_tasks.task8.unit;
+package by.epamtc.basic_tasks.function;
 
 public class NoFunctionValueException extends Exception {
 

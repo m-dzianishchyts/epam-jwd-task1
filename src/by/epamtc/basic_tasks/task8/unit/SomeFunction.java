@@ -1,5 +1,8 @@
 package by.epamtc.basic_tasks.task8.unit;
 
+import by.epamtc.basic_tasks.function.Function;
+import by.epamtc.basic_tasks.function.NoFunctionValueException;
+
 public class SomeFunction {
 
     private static final Function functionOptionA = x -> {

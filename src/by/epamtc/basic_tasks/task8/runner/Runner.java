@@ -1,7 +1,7 @@
 package by.epamtc.basic_tasks.task8.runner;
 
 import by.epamtc.basic_tasks.scanner.DataScanner;
-import by.epamtc.basic_tasks.task8.unit.NoFunctionValueException;
+import by.epamtc.basic_tasks.function.NoFunctionValueException;
 import by.epamtc.basic_tasks.task8.unit.SomeFunction;
 
 public class Runner {
