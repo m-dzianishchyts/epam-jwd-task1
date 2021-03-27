@@ -3,15 +3,7 @@ package by.epamtc.basic_tasks.task2.scanner;
 import by.epamtc.basic_tasks.scanner.DataScanner;
 import by.epamtc.basic_tasks.task2.unit.Month;
 
-public class DateScanner {
-
-    public static int enterYearFromConsole() {
-        int year;
-        do {
-            year = DataScanner.enterIntegerFromConsole();
-        } while (year <= 0);
-        return year;
-    }
+public class MonthScanner {
 
     public static Month enterMonthFromConsole() {
         int monthNumber;
@@ -19,7 +11,7 @@ public class DateScanner {
             monthNumber = DataScanner.enterIntegerFromConsole();
         } while (monthNumber < 1 || monthNumber > 12);
 
-        // Смещение из-за нумерации с нуля.
+        // Offset because of numerating elements from 0.
         return Month.values()[monthNumber - 1];
     }
 }
