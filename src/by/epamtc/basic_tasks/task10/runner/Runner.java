@@ -2,7 +2,7 @@ package by.epamtc.basic_tasks.task10.runner;
 
 import by.epamtc.basic_tasks.scanner.DataScanner;
 import by.epamtc.basic_tasks.task10.printer.FunctionValuesPrinter;
-import by.epamtc.basic_tasks.task10.unit.FunctionValuesLogics;
+import by.epamtc.basic_tasks.task10.unit.TangentValuesLogics;
 
 public class Runner {
 
@@ -14,7 +14,7 @@ public class Runner {
         System.out.print("Enter step: ");
         double step = DataScanner.enterPositiveDoubleFromConsole();
 
-        var functionValues = FunctionValuesLogics.computeFunctionValues(fromValue, toValue, step);
+        var functionValues = TangentValuesLogics.computeFunctionValues(fromValue, toValue, step);
         FunctionValuesPrinter.printValuesOf(functionValues);
     }
 }

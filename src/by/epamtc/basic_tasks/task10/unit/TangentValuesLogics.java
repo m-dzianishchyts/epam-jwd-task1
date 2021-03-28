@@ -6,9 +6,9 @@ import by.epamtc.basic_tasks.function.NoFunctionValueException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class FunctionValuesLogics {
+public class TangentValuesLogics {
 
-    private static final Function function = Math::tan;
+    private static final Function tanFunction = Math::tan;
 
     public static Map<Double, Double> computeFunctionValues(double fromValue, double toValue, double step) {
         if (toValue < fromValue) {
@@ -19,14 +19,19 @@ public class FunctionValuesLogics {
         }
         Map<Double, Double> functionValues = new LinkedHashMap<>();
         for (double x = fromValue; x < toValue; x += step) {
-            double functionValue;
-            try {
-                functionValue = function.valueAt(x);
-            } catch (NoFunctionValueException e) {
-                functionValue = Double.NaN;
-            }
+            double functionValue = tan(x);
             functionValues.put(x, functionValue);
         }
         return functionValues;
+    }
+
+    public static double tan(double x) {
+        double tanValue;
+        try {
+            tanValue = tanFunction.valueAt(x);
+        } catch (NoFunctionValueException e) {
+            tanValue = Double.NaN;
+        }
+        return tanValue;
     }
 }
