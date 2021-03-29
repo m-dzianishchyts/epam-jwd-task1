@@ -10,8 +10,17 @@ public class EvenNumbersLogics {
     }
 
     public static boolean areEvenAtLeastTwo(int numberA, int numberB, int numberC, int numberD) {
-        long evensAmount = Stream.of(numberA, numberB, numberC, numberD).filter(EvenNumbersLogics::isEven).count();
-        boolean atLeastTwoAreEven = evensAmount >= 2;
+        int evensCounter = 0;
+        boolean atLeastTwoAreEven = false;
+        for (var number : new int[] {numberA, numberB, numberC, numberD}) {
+            if (isEven(number)) {
+                evensCounter++;
+                if (evensCounter >= 2) {
+                    atLeastTwoAreEven = true;
+                    break;
+                }
+            }
+        }
         return atLeastTwoAreEven;
     }
 }
