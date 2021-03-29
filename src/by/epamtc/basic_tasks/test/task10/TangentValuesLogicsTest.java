@@ -3,7 +3,8 @@ package by.epamtc.basic_tasks.test.task10;
 import by.epamtc.basic_tasks.task10.unit.TangentValuesLogics;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TangentValuesLogicsTest {
 

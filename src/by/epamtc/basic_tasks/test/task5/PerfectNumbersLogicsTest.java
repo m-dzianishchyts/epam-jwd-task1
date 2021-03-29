@@ -2,7 +2,9 @@ package by.epamtc.basic_tasks.test.task5;
 
 import by.epamtc.basic_tasks.task5.unit.PerfectNumbersLogics;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class PerfectNumbersLogicsTest {
 
