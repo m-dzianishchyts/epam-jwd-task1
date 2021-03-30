@@ -1,7 +1,5 @@
 package by.epamtc.basic_tasks.task4.unit;
 
-import java.util.stream.Stream;
-
 public class EvenNumbersLogics {
 
     public static boolean isEven(int number) {
