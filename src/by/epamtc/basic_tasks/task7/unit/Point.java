@@ -1,10 +1,14 @@
 package by.epamtc.basic_tasks.task7.unit;
 
 public class Point {
-    private final double x;
-    private final double y;
 
-    public Point(double x, double y) {
+    private double x;
+    private double y;
+
+    public Point(double x, double y) throws InvalidCoordinateException {
+        if (Double.isNaN(x) || Double.isNaN(y)) {
+            throw new InvalidCoordinateException("Coordinate cannot be NaN.");
+        }
         this.x = x;
         this.y = y;
     }
@@ -42,5 +46,19 @@ public class Point {
 
     public double getY() {
         return y;
+    }
+
+    public void setX(double x) throws InvalidCoordinateException {
+        if (Double.isNaN(x)) {
+            throw new InvalidCoordinateException("Coordinate cannot be NaN.");
+        }
+        this.x = x;
+    }
+
+    public void setY(double y) throws InvalidCoordinateException {
+        if (Double.isNaN(y)) {
+            throw new InvalidCoordinateException("Coordinate cannot be NaN.");
+        }
+        this.y = y;
     }
 }
