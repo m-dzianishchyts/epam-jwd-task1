@@ -1,9 +1,10 @@
 package by.epamtc.basic_tasks.task6.unit;
 
 public class DayTime {
-    private final int hours;
-    private final int minutes;
-    private final int seconds;
+
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     public DayTime(int hours, int minutes, int seconds) {
         this.hours = hours;
@@ -47,5 +48,17 @@ public class DayTime {
 
     public int getSeconds() {
         return seconds;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
     }
 }
