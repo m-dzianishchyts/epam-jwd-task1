@@ -1,7 +1,6 @@
 package by.epamtc.basic_tasks.test.task8;
 
-import by.epamtc.basic_tasks.function.NoFunctionValueException;
-import by.epamtc.basic_tasks.task8.unit.SomeFunction;
+import by.epamtc.basic_tasks.task8.unit.SomeMathFunction;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedHashMap;
@@ -9,7 +8,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SomeFunctionTest {
+class SomeMathFunctionTest {
 
     @Test
     void valueAt() {
@@ -17,11 +16,7 @@ class SomeFunctionTest {
         for (double x : new double[]{Double.NEGATIVE_INFINITY, -10, -5, -2, 1, Math.pow(6, 1.0 / 3), 2, 3, 5, 10,
                                      Double.POSITIVE_INFINITY, Double.NaN}) {
             double functionValue;
-            try {
-                functionValue = SomeFunction.valueAt(x);
-            } catch (NoFunctionValueException e) {
-                functionValue = Double.NaN;
-            }
+            functionValue = SomeMathFunction.valueAt(x);
             functionValues.put(x, functionValue);
         }
 
