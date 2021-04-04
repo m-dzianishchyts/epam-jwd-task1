@@ -6,9 +6,10 @@ package by.epamtc.basic_tasks.task3.unit;
  */
 public class InnerOuterSquaresLogics {
 
-    public static double calculateInnerSquareAreaByOuterSquareArea(double outerSquareArea) {
+    public static double calculateInnerSquareAreaByOuterSquareArea(double outerSquareArea)
+            throws InvalidShapePropertyException {
         if (outerSquareArea <= 0) {
-            throw new IllegalArgumentException("Area must be positive");
+            throw new InvalidShapePropertyException("Area must be positive");
         }
         double outerSquareSideLength = SquareLogics.calculateSquareSideLengthByArea(outerSquareArea);
         double circleRadius = InscribedShapesLogics.calculateRadiusOfCircleInscribedInSquare(outerSquareSideLength);
