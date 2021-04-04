@@ -1,20 +1,25 @@
 package by.epamtc.basic_tasks.task6.unit;
 
-import java.time.Duration;
-
 public class TimeLogics {
 
-    private static final int SECONDS_PER_DAY = 86400;
+    private static final int SECONDS_PER_MINUTE = 60;
+    private static final int MINUTES_PER_HOUR = 60;
+    private static final int HOURS_PER_DAY = 24;
 
-    public static DayTime calculateDayTimeByCurrentSecond(int secondNumber) {
+    public static DayTime calculateDayTimeByCurrentSecond(int secondNumber) throws InvalidTimeException {
         if (secondNumber <= 0) {
-            throw new IllegalArgumentException("Current second number must be positive.");
+            throw new InvalidTimeException("Current second number must be positive.");
         }
-        if (secondNumber > SECONDS_PER_DAY) {
-            throw new IllegalArgumentException("Current second number cannot be greater then " + SECONDS_PER_DAY + ".");
+        int secondsPerDay = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY;
+        if (secondNumber > secondsPerDay) {
+            throw new InvalidTimeException("Current second number cannot be greater then " + secondsPerDay + ".");
         }
-        Duration duration = Duration.ofSeconds(secondNumber - 1);
-        DayTime dayTime = new DayTime(duration.toHoursPart(), duration.toMinutesPart(), duration.toSecondsPart());
+        int passedSecondsAmount = secondNumber - 1;
+        int secondsPerHour = SECONDS_PER_MINUTE * MINUTES_PER_HOUR;
+        int passedTimeHours = passedSecondsAmount / secondsPerHour;
+        int passedTimeMinutes = (passedSecondsAmount % secondsPerHour) / SECONDS_PER_MINUTE;
+        int passedTimeSeconds = passedSecondsAmount % SECONDS_PER_MINUTE;
+        DayTime dayTime = new DayTime(passedTimeHours, passedTimeMinutes, passedTimeSeconds);
         return dayTime;
     }
 }
