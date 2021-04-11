@@ -6,9 +6,8 @@ public class Point {
     private double y;
 
     public Point(double x, double y) throws InvalidCoordinateException {
-        if (Double.isNaN(x) || Double.isNaN(y)) {
-            throw new InvalidCoordinateException("Coordinate cannot be NaN.");
-        }
+        checkCoordinate(x);
+        checkCoordinate(y);
         this.x = x;
         this.y = y;
     }
@@ -49,16 +48,18 @@ public class Point {
     }
 
     public void setX(double x) throws InvalidCoordinateException {
-        if (Double.isNaN(x)) {
-            throw new InvalidCoordinateException("Coordinate cannot be NaN.");
-        }
+        checkCoordinate(x);
         this.x = x;
     }
 
     public void setY(double y) throws InvalidCoordinateException {
-        if (Double.isNaN(y)) {
+        checkCoordinate(y);
+        this.y = y;
+    }
+
+    private void checkCoordinate(double coordinate) throws InvalidCoordinateException {
+        if (Double.isNaN(coordinate)) {
             throw new InvalidCoordinateException("Coordinate cannot be NaN.");
         }
-        this.y = y;
     }
 }
