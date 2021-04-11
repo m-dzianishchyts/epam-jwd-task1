@@ -9,4 +9,12 @@ public class InvalidIntervalException extends Exception {
     public InvalidIntervalException(String message) {
         super(message);
     }
+
+    public InvalidIntervalException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public InvalidIntervalException(Throwable cause) {
+        super(cause);
+    }
 }
