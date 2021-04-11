@@ -2,6 +2,7 @@ package by.epamtc.basic_tasks.task4.runner;
 
 import by.epamtc.basic_tasks.scanner.DataScanner;
 import by.epamtc.basic_tasks.task4.unit.EvenNumbersLogics;
+import by.epamtc.basic_tasks.task4.unit.InvalidNumbersException;
 
 public class Runner {
 
@@ -15,8 +16,12 @@ public class Runner {
             System.out.printf("Accepted %d number(s).\n", i);
         } while (i < enteredNumbers.length);
 
-        boolean inputContainsAtLeastTwoEvenNumbers = EvenNumbersLogics.areEvenAtLeastTwo(enteredNumbers[0],
-                enteredNumbers[1], enteredNumbers[2], enteredNumbers[3]);
+        boolean inputContainsAtLeastTwoEvenNumbers = false;
+        try {
+            inputContainsAtLeastTwoEvenNumbers = EvenNumbersLogics.areEvenAtLeastTwo(enteredNumbers);
+        } catch (InvalidNumbersException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("At least two of entered numbers are even: " + inputContainsAtLeastTwoEvenNumbers);
     }
