@@ -3,8 +3,8 @@ package by.epamtc.basic_tasks.task5;
 import by.epamtc.basic_tasks.task5.unit.PerfectNumbersUtils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PerfectNumbersLogicsTest {
 
