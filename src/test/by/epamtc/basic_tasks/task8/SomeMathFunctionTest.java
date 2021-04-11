@@ -15,8 +15,7 @@ class SomeMathFunctionTest {
         Map<Double, Double> functionValues = new LinkedHashMap<>();
         for (double x : new double[]{Double.NEGATIVE_INFINITY, -10, -5, -2, 1, Math.pow(6, 1.0 / 3), 2, 3, 5, 10,
                                      Double.POSITIVE_INFINITY, Double.NaN}) {
-            double functionValue;
-            functionValue = SomeMathFunctionHelper.valueAt(x);
+            double functionValue = SomeMathFunctionHelper.valueAt(x);
             functionValues.put(x, functionValue);
         }
 
