@@ -3,9 +3,8 @@ package by.epamtc.basic_tasks.task7.unit;
 public class PointLogics {
 
     public static Point nearestToZeroCenter(Point pointA, Point pointB) throws InvalidCircleException {
-        if (pointA == null || pointB == null) {
-            throw new InvalidCircleException("Point cannot be null.");
-        }
+        checkPoint(pointA);
+        checkPoint(pointB);
         Point zeroPoint = null;
         try {
             zeroPoint = new Point(0, 0);
@@ -26,12 +25,17 @@ public class PointLogics {
     }
 
     public static double calculateDistanceBetween(Point pointA, Point pointB) throws InvalidCircleException {
-        if (pointA == null || pointB == null) {
-            throw new InvalidCircleException("Point cannot be null.");
-        }
+        checkPoint(pointA);
+        checkPoint(pointB);
         double distanceX = pointB.getX() - pointA.getX();
         double distanceY = pointB.getY() - pointA.getY();
         double distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
         return distance;
+    }
+
+    private static void checkPoint(Point point) throws InvalidCircleException {
+        if (point == null) {
+            throw new InvalidCircleException("Point cannot be null.");
+        }
     }
 }
