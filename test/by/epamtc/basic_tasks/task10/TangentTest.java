@@ -1,4 +1,4 @@
-package by.epamtc.basic_tasks.test.task10;
+package by.epamtc.basic_tasks.task10;
 
 import by.epamtc.basic_tasks.task10.unit.Tangent;
 import org.junit.jupiter.api.Test;

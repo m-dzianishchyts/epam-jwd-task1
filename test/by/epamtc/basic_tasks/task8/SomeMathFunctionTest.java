@@ -1,4 +1,4 @@
-package by.epamtc.basic_tasks.test.task8;
+package by.epamtc.basic_tasks.task8;
 
 import by.epamtc.basic_tasks.task8.unit.SomeMathFunctionHelper;
 import org.junit.jupiter.api.Test;
