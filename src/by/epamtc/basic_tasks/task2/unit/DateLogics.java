@@ -3,12 +3,8 @@ package by.epamtc.basic_tasks.task2.unit;
 public class DateLogics {
 
     public static int retrieveDaysAmountInMonth(int year, Month month) throws InvalidDateException {
-        if (year <= 0) {
-            throw new InvalidDateException("Year must be positive.");
-        }
-        if (month == null) {
-            throw new InvalidDateException("Month cannot be null.");
-        }
+        checkYear(year);
+        checkMonth(month);
         int daysAmountInMonth;
         switch (month) {
             case JANUARY:
@@ -30,10 +26,20 @@ public class DateLogics {
     }
 
     public static boolean isLeapYear(int year) throws InvalidDateException {
+        checkYear(year);
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        return isLeapYear;
+    }
+
+    private static void checkMonth(Month month) throws InvalidDateException {
+        if (month == null) {
+            throw new InvalidDateException("Month cannot be null.");
+        }
+    }
+
+    private static void checkYear(int year) throws InvalidDateException {
         if (year <= 0) {
             throw new InvalidDateException("Year must be positive.");
         }
-        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-        return isLeapYear;
     }
 }
