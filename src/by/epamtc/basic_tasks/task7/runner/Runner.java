@@ -1,6 +1,6 @@
 package by.epamtc.basic_tasks.task7.runner;
 
-import by.epamtc.basic_tasks.scanner.DataScanner;
+import by.epamtc.basic_tasks.scanner.DataScanningUtils;
 import by.epamtc.basic_tasks.task7.unit.InvalidCircleException;
 import by.epamtc.basic_tasks.task7.unit.InvalidCoordinateException;
 import by.epamtc.basic_tasks.task7.unit.Point;
@@ -40,7 +40,7 @@ public class Runner {
         while (true) {
             try {
                 System.out.print("Enter x for point: ");
-                double x = DataScanner.enterDoubleFromConsole();
+                double x = DataScanningUtils.enterDoubleFromConsole();
                 point.setX(x);
                 break;
             } catch (InvalidCoordinateException e) {
@@ -53,7 +53,7 @@ public class Runner {
         while (true) {
             try {
                 System.out.print("Enter y for point: ");
-                double y = DataScanner.enterDoubleFromConsole();
+                double y = DataScanningUtils.enterDoubleFromConsole();
                 point.setY(y);
                 break;
             } catch (InvalidCoordinateException e) {

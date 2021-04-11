@@ -34,8 +34,8 @@ public class Point {
     public int hashCode() {
         long xLongBits = Double.doubleToLongBits(x);
         long yLongBits = Double.doubleToLongBits(y);
-        int hashCode = (int) (xLongBits ^ (xLongBits >>> 32));
-        hashCode = (int) (31 * hashCode + (yLongBits ^ (yLongBits >>> 32)));
+        int hashCode = (int) (xLongBits ^ (xLongBits >>> (Long.SIZE / 2)));
+        hashCode = (int) ((Integer.SIZE - 1) * hashCode + (yLongBits ^ (yLongBits >>> (Long.SIZE / 2))));
         return hashCode;
     }
 

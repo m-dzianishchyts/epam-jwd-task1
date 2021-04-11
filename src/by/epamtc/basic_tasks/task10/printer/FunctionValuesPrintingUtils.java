@@ -2,7 +2,10 @@ package by.epamtc.basic_tasks.task10.printer;
 
 import java.util.Map;
 
-public class FunctionValuesPrinter {
+public class FunctionValuesPrintingUtils {
+
+    private FunctionValuesPrintingUtils() {
+    }
 
     private static final int TABLE_WIDTH = 30;
     private static final int RESERVED_TABLE_WIDTH = 7;

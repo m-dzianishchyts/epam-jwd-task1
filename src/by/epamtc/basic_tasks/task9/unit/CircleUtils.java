@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task9.unit;
 
-public class CircleLogics {
+public final class CircleUtils {
+
+    private CircleUtils() {
+    }
 
     public static double calculatePerimeterByRadius(double radius) throws InvalidCirclePropertyException {
         checkRadius(radius);

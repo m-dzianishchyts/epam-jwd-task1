@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task3.unit;
 
-public class SquareLogics {
+public final class SquareUtils {
+
+    private SquareUtils() {
+    }
 
     public static double calculateSquareSideLengthByArea(double area) throws InvalidShapePropertyException {
         if (area <= 0) {

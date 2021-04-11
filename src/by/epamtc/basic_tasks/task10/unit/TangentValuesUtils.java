@@ -3,9 +3,9 @@ package by.epamtc.basic_tasks.task10.unit;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public final class TangentValuesLogics {
+public final class TangentValuesUtils {
 
-    private TangentValuesLogics() {
+    private TangentValuesUtils() {
     }
 
     public static Map<Double, Double> computeTangentValues(double fromValue, double toValue, double step)

@@ -1,6 +1,6 @@
 package by.epamtc.basic_tasks.task10.unit;
 
-public class Tangent {
+public final class Tangent {
 
     private Tangent() {
     }

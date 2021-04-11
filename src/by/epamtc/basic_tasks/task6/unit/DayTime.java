@@ -3,7 +3,7 @@ package by.epamtc.basic_tasks.task6.unit;
 /**
  * 24-hour time format.
  */
-public class DayTime {
+public final class DayTime {
 
     public static final int HOURS_PER_DAY = 24;
     public static final int MINUTES_PER_HOUR = 60;
@@ -49,9 +49,9 @@ public class DayTime {
 
     @Override
     public int hashCode() {
-        int hashCode = hours ^ (hours >>> 16);
-        hashCode = 31 * hashCode + (minutes ^ (minutes >>> 16));
-        hashCode = 31 * hashCode + (seconds ^ (seconds >>> 16));
+        int hashCode = hours ^ (hours >>> (Integer.SIZE / 2));
+        hashCode = (Integer.SIZE - 1) * hashCode + (minutes ^ (minutes >>> (Integer.SIZE / 2)));
+        hashCode = (Integer.SIZE - 1) * hashCode + (seconds ^ (seconds >>> (Integer.SIZE / 2)));
         return hashCode;
     }
 

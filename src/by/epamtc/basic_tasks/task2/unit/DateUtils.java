@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task2.unit;
 
-public class DateLogics {
+public final class DateUtils {
+
+    private DateUtils() {
+    }
 
     public static int retrieveDaysAmountInMonth(int year, Month month) throws InvalidDateException {
         checkYear(year);

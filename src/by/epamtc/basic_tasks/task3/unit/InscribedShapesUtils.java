@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task3.unit;
 
-public class InscribedShapesLogics {
+public class InscribedShapesUtils {
+
+    private InscribedShapesUtils() {
+    }
 
     public static double calculateSideLengthOfSquareInscribedInCircle(double radius)
             throws InvalidShapePropertyException {

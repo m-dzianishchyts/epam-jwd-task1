@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task1.unit;
 
-public class LastDigitLogics {
+public final class LastDigitUtils {
+
+    private LastDigitUtils() {
+    }
 
     public static int calculateLastDigitOfSquareOf(int number) {
         int lastDigitOfNumber = number % 10;

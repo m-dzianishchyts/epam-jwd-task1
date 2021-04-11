@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task5.unit;
 
-public class PerfectNumbersLogics {
+public final class PerfectNumbersUtils {
+
+    private PerfectNumbersUtils() {
+    }
 
     /* A number is perfect if it is equal to the sum of all its proper divisors
      * (in other words all positive divisors other than the number itself).
@@ -24,27 +27,25 @@ public class PerfectNumbersLogics {
         // Work with absolute value.
         long numberAbs = Math.abs(number);
 
-        long divisorsSum;
+        // 0 has an infinite number of divisors.
         if (numberAbs == 0) {
+            return Long.MAX_VALUE;
+        }
 
-            // 0 has an infinite number of divisors.
-            divisorsSum = Long.MAX_VALUE;
-        } else if (numberAbs == 1) {
+        // The only divisor of 1 is 1, but it does not fit.
+        if (numberAbs == 1) {
+            return 0;
+        }
 
-            // The only divisor of 1 is 1, but it does not fit.
-            divisorsSum = 0;
-        } else {
-
-            // Each number is divisible by 1, so it can start with 1.
-            // It will detect divisors faster by adding the divisor itself to the sum
-            // and 'number / divisor' (which is also divisor).
-            divisorsSum = 1;
-            for (long i = 2; i <= Math.sqrt(numberAbs); i++) {
-                if (numberAbs % i == 0) {
-                    divisorsSum += i;
-                    if (i * i != numberAbs) {
-                        divisorsSum += numberAbs / i;
-                    }
+        // Each number is divisible by 1, so it can start with divisor sum of 1.
+        // It will detect divisors faster by adding the divisor itself to the sum
+        // and 'number / divisor' (which is also divisor).
+        long divisorsSum = 1;
+        for (long i = 2; i <= Math.sqrt(numberAbs); i++) {
+            if (numberAbs % i == 0) {
+                divisorsSum += i;
+                if (i != Math.sqrt(numberAbs)) {
+                    divisorsSum += numberAbs / i;
                 }
             }
         }

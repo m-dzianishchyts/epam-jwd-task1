@@ -2,6 +2,9 @@ package by.epamtc.basic_tasks.task7.unit;
 
 public class PointLogics {
 
+    private PointLogics() {
+    }
+
     public static Point nearestToZeroCenter(Point pointA, Point pointB) throws InvalidCircleException {
         checkPoint(pointA);
         checkPoint(pointB);

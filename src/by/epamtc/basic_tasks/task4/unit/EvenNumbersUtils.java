@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task4.unit;
 
-public class EvenNumbersLogics {
+public final class EvenNumbersUtils {
+
+    private EvenNumbersUtils() {
+    }
 
     public static boolean areEvenAtLeastTwo(int... numbers) throws InvalidNumbersException {
         if (numbers == null) {

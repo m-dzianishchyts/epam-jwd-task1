@@ -1,6 +1,9 @@
 package by.epamtc.basic_tasks.task6.unit;
 
-public class TimeLogics {
+public final class TimeUtils {
+
+    private TimeUtils() {
+    }
 
     public static DayTime calculateDayTimeByCurrentSecond(int secondNumber) throws InvalidTimeException {
         if (secondNumber <= 0) {
